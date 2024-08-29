@@ -1,11 +1,13 @@
 import os
 import django
-from django.contrib.auth.models import User
-from mensajes.models import Mensaje
 
-# Configuración de Django
+# Configura el entorno de Django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'TableroMensajes.settings')
 django.setup()
+
+# Ahora puedes importar modelos y trabajar con ellos
+from django.contrib.auth.models import User
+from mensajes.models import Mensaje
 
 def crear_datos_prueba():
     # Crear usuarios de prueba
@@ -20,4 +22,3 @@ def crear_datos_prueba():
 
 if __name__ == '__main__':
     crear_datos_prueba()
-    
